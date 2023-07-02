@@ -1,1 +1,45 @@
-Scalability
+You have some code on computer and want to share with many different people. 
+But instead of sharing your computer, you can expose your code as API.
+Users can request this API and get data in turn as a response.
+The request computer is known as CLIENT, and the response computer is known as SERVER.
+All the data can be stored in database on a server.
+
+Problem:
+
+But, what If this server goes down, or the server crashes. Data is LOSS. 
+
+Solution:
+
+We can store the data on cloud. Cloud is set of computers to run our service that somebody provide to us like AWS, Google Cloud etc. 
+Reliability is taken care by this service prviders.
+
+Problem:
+Lots of people are running algorithms on this servers. The code running on machine, is not able to handle this code.
+
+Solution:
+Buy bigger machines - Vertical Scaling - 
+  - No Load Balancing 
+  - Single Point of failure
+  - Inter Process Communication
+  - One system all data resides. Data consistency is there.
+  - Hardware limit.
+
+or Buy More Machines - Horizontal Sclaing - 
+    Distribute load on different machines
+    Resilient - Even if one machine fail, the other machine can take care of it.
+    Network Calls between 2 services. RPC(Remote Procedure Calls)
+    Data is difficult to maintain on all machines. Data Consistency is a issue
+    Scales well. Servers can be added on no of users.
+
+This process is known as Scalability.
+
+
+In real world, we use good features from both.
+
+Is your System
+    Scales Well - Resilient ?
+    Consistent ? 
+    Iner Process CommunicationScalable ?
+
+
+

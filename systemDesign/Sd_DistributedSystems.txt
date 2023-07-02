@@ -1,0 +1,32 @@
+Example:
+
+We have one chef with multiple orders.
+
+The first thing we can think of:
+    - Ask chef to work harder. Put in more money
+    - Optimize process and increase throughput with the same resource - (Vertical Scaling)
+    - Preparing pizza base before in non -peak hour (Preprocessing)
+    - If one day chef gets ill ? Keep Backup so even if chef dosent come, you have someone to work. (Master - Slave Architecture)
+    - Hire more chef/resources - Buying more machines to get nnore work done.(Horizontal Scaling)
+    - Responsibilities well defined -
+         Every server is assigned its responsibility, and if whatever comes regarding their responsibility
+         is routed to them. (MicroServices Architecture)
+    - Create one more shop if there is problem in one shop (Backup)
+    - Route your request which shop (Distributed Systems - Partitioning)
+    - Route on basis of time and location. Which is near route to it - (Load Balancing)
+    - This design is now fault tolerant
+    - Separate concerns/ responsibilities. Handle separate system more efficiently - (Decoupling)
+    - Logging and Metrics.
+    - Extensible
+
+    All above was High Level design:
+        -Deploying
+        -How system will be interacting with each other.
+
+    Low Level Design:
+        -How you are going to code
+        - Functions, clasess, objects
+        - Eficient and clean code.
+
+
+
