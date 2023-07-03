@@ -1,0 +1,24 @@
+When we multiple servers added, we need a way to route request to different servers to balance the load.
+
+To Evenly distribute load on all servers is known as (Consisten Hashing)
+
+First approach is hash requestId(which is random)
+Example h(r1) = m ==> Hashing requestId which is random and after hashing result is "m"
+Request should Route to Server No = m % n, where "n" is total number of servers.
+
+
+I we are hashing with rando requestId, there is a probability, the request goes on to many different servers.
+For example, If server0 has requestId1 to fetch user profile, and later requestId2 also need same info. 
+But as our requestId is random the requestId2 may route to different server, exampple server4.
+It is increasing load on other server to fetch same info.
+whereas, we could have used cache of server0 to fetch the information.
+
+This problem is solved by Consitent hashing.
+In Consistent HAshing, the requestId wont be random, it will the same parameter, example USerId/userEmail etc.
+Due to consistent requestId, even if we have to fetch same info, the request will route to the same server, and get the info from cache.
+
+What if we have less servers, and more requests ?
+To increase servers is not possible always as we have to pay for it.
+Instead, we can hash the requestId twice.
+So that the server will point to 2 different points.
+And now instead of 4 servers we have 8 servers. So the load is distributed evenly.
