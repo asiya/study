@@ -1,0 +1,12 @@
+Messaging Queue makes it possible for applications to communicate asyncronously, by send messages to each other via queue.
+A Message Queue provides temporary storage between sender and receiver so that the sender can keep operating without interruption
+when the destination program is busy or not connected.
+Asynchronous processing allows a task to call a service, and move on to next task while the service process the
+request at its own pace.
+
+The basic architecture of queue , client call producers that create messages and deliver them. 
+servers are called consumers, connect to the queue and get message to be processed.
+
+the queue can provide protection from service outages and failures.
+
+Examples of queues: Kaka, Heron, real-time streaming, Amazon SQS, RabbitMQ.
